@@ -1,15 +1,17 @@
 <?php
 
-namespace Xtools\Features\Basket;
+namespace Dev\Xtools\Features\Basket;
 
 use Bitrix\Main\Routing\RoutingConfigurator;
-use Xtools\Core\Routable;
-use Xtools\Features\Basket\Controllers\BasketController;
+use Dev\Xtools\Core\Routable;
+use Dev\Xtools\Features\Basket\Controllers\BasketController;
 
 class BasketRoutes implements Routable
 {
     public static function registerRoutes(RoutingConfigurator $routes)
     {
-        $routes->get('/api/basket/add', [BasketController::class, 'get']);
+        $routes->prefix('api')->group(function (RoutingConfigurator $routes) {
+            $routes->get('basket/add', [BasketController::class, 'get']);
+        });
     }
 }

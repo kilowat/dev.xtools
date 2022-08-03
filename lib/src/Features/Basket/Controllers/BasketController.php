@@ -1,11 +1,12 @@
 <?php
-namespace Xtools\Features\Basket\Controllers;
+namespace Dev\Xtools\Features\Basket\Controllers;
 
-use Xtools\Core\BaseController;
+
+use Dev\Xtools\Core\BaseController;
 
 class BasketController extends BaseController
 {
-    public function getAction(): string
+    public function getAction()
     {
         return 'get';
     }

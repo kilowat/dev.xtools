@@ -1,5 +1,5 @@
 <?php
-namespace Xtools\Features\Basket\Services;
+namespace Dev\Xtools\Features\Basket\Services;
 
 use Bitrix\Sale\Basket;
 
